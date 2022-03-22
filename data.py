@@ -1,4 +1,5 @@
 import pandas as pd
+import numpy as np
 
 
 df = pd.read_csv('historical_RAPTOR_by_player.csv') 
@@ -45,3 +46,6 @@ def end_name(df):
 
 end_name(df)    
 
+
+df.groupby("player_name").aggregate(["min", "max"])
+print(df.groupby("player_name").aggregate(["min", "max"]))
