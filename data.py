@@ -49,3 +49,4 @@ end_name(df)
 
 df.groupby("player_name").aggregate(["min", "max"])
 print(df.groupby("player_name").aggregate(["min", "max"]))
+
